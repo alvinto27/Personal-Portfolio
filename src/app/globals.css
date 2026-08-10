@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --canvas: #0a0a0c;
+  --deep-slate: #121318;
+  --glass: rgb(18 19 24 / 70%);
+  --bridges-yellow: #ffc800;
+  --chiral-gold: #e6b800;
+  --holographic-cyan: #00e5ff;
+  --warning: #ff3300;
+  --foreground: #f2f5f7;
+  --muted: #8d949e;
+  --line: rgb(242 245 247 / 14%);
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-deep-slate: var(--deep-slate);
+  --color-glass: var(--glass);
+  --color-bridges-yellow: var(--bridges-yellow);
+  --color-chiral-gold: var(--chiral-gold);
+  --color-holographic-cyan: var(--holographic-cyan);
+  --color-warning: var(--warning);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --shadow-hud: 0 0 32px rgb(0 229 255 / 8%);
+  --shadow-signal: 0 0 18px rgb(0 229 255 / 32%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  background: var(--canvas);
+}
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 76% 12%, rgb(0 229 255 / 6%), transparent 28rem),
+    radial-gradient(circle at 18% 85%, rgb(230 184 0 / 4%), transparent 24rem),
+    var(--canvas);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--holographic-cyan);
+  color: var(--canvas);
+}
+
+:focus-visible {
+  outline: 1px solid var(--holographic-cyan);
+  outline-offset: 4px;
+}
+
+.hud-grid {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.hud-panel {
+  border: 1px solid var(--line);
+  background: var(--glass);
+  box-shadow: var(--shadow-hud);
+  backdrop-filter: blur(18px);
+}
+
+.telemetry-label {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
