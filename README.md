@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Portfolio
 
 A production-focused developer portfolio built with Next.js App Router, Tailwind CSS, GSAP, and WebGL/Canvas primitives. The interface direction is kinetic sci-fi minimalism with telemetry, chiral-network, and holographic HUD motifs.
@@ -53,3 +54,6 @@ Environment variables for the contact transport will be documented in `.env.exam
 5. `// MISSION_LOG` experience timeline
 6. `// BRIDGES_COMMS` contact transmission
 7. Accessibility, performance, SEO, and Vercel launch checks
+=======
+# Personal-Portfolio
+>>>>>>> a9ba4a07290dc2f8ef95afe6fb6b4c3e4f84d4be
